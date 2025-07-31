@@ -1,0 +1,23 @@
+body{
+    background: linear-gradient( to right, #F9FAFB, #E0E7FF);
+    font-family: 'Poppins', sans-serif;
+}
+#topic{
+    color: #1E3A8A;
+    font-weight: 700;
+    font-size: 3rem;
+    text-align: center;
+}
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    background-color: #33477e !important;
+}
+.navbar-brand,
+.nav-link,
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: var(--bs-navbar-active-color);
+    color: white;
+    margin: 8px;
+}
+.nav-link:hover {
+    color: #95a2c4;
+}
