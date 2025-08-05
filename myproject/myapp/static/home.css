@@ -21,3 +21,30 @@ body{
 .nav-link:hover {
     color: #95a2c4;
 }
+body.dark {
+    background: #121212 !important;
+    color: white !important;
+}
+
+body.dark .card {
+    background-color: #1e1e1e !important;
+    color: white !important;
+}
+
+body.dark .navbar,
+body.dark .navbar.bg-body-tertiary {
+    background-color: #222 !important;
+}
+
+body.dark a.nav-link,
+body.dark a.dropdown-item {
+    color: #f5f5f5 !important;
+}
+
+body.dark a.nav-link:hover,
+body.dark a.dropdown-item:hover {
+    color: #ccc !important;
+}
+body.dark  .dropdown-menu .dropdown-item{
+    color: black !important;
+}
