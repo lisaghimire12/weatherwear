@@ -50,11 +50,22 @@
 {#  card  #}
 <div class="card-group">
   <div class="card mt-5 mx-5">
-    <img src="..." class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <a href="#" class="btn btn-primary">Update Weather</a>
+      <form method = "get" action = "{% url 'home' %}">
+      <input type="text" name="city" placeholder="Enter city" class="form-control my-2" />
+      <button type="submit" class="btn btn-primary">Update Weather</button>
+  
+      {% if weather %}
+      {% if weather.Error %}
+        <p class="text-danger">{{ weather.Error }}</p>
+    {% else %}
+        <p><strong>City:</strong> {{ weather.city }}</p>
+        <p><strong>Temperature:</strong> {{ weather.temperature }} °C</p>
+        <p><strong>Description:</strong> {{ weather.description }}</p>
+        <img src="http://openweathermap.org/img/wn/{{ weather.icon }}@2x.png" alt="Weather Icon">
+        {% endif %}
+{% endif %}
+  </form>
     </div>
   </div>
   <div class="card mt-5 mx-5" style="height:400px">
