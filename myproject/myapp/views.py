@@ -22,6 +22,11 @@ def home(request):
                 "description": data["weather"][0]["description"],
                 "icon": data["weather"][0]["icon"]
             }
+            
+            query = weather["description"] + " outfits"
+            pinterest_url = f"https://www.pinterest.com/search/pins/?q={query.replace(' ', '%20')}"
+            weather ["pinterest_url"] = pinterest_url
+             
         else:
             weather = {"Error": "Could not fetch weather data"} 
 
