@@ -23,7 +23,7 @@ def home(request):
                 "icon": data["weather"][0]["icon"]
             }
             
-            query = weather["description"] + " outfits"
+            query = "outfits to wear in " + weather["description"] + " weather"
             pinterest_url = f"https://www.pinterest.com/search/pins/?q={query.replace(' ', '%20')}"
             weather ["pinterest_url"] = pinterest_url
              
